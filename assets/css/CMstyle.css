@@ -3,18 +3,17 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  --first-color: #369e62;
+  --first-color: hsl(354, 78%, 60%);
   --button-color: hsl(0, 0%, 17%);
   --button-color-alt: hsl(0, 0%, 21%);
   --card-color: hsl(0, 0%, 90%);
-  --title-color: #fff;
+  --title-color: hsl(0, 0%, 15%);
   --text-color: hsl(0, 0%, 35%);
   --text-color-light: hsl(0, 0%, 55%);
-  --body-color: hsl(0, 0%, 0%);
+  --body-color: hsl(206, 4%, 97%);
   --container-color: #fff;
   --border-color: hsl(0, 0%, 94%);
 
@@ -48,7 +47,7 @@
 
 @media screen and (min-width: 968px) {
   :root {
-
+    --biggest-font-size: 2.5rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -77,9 +76,8 @@ input {
 }
 
 body {
-  background-image: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
   margin: 0;
-  /*===============background-color: var(--body-color); */
+  background-color: var(--body-color);
   color: var(--text-color);
   /*For animation dark mode*/
   transition: .4s;
@@ -234,14 +232,13 @@ body.dark-theme {
 /*=============== HEADER & NAV ===============*/
 .header {
   width: 100%;
-  /*background: transparent;*/
+  background: transparent;
   position: fixed;
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
   /*For animation dark mode*/
   transition: .4s;
-  background-color: rgb(22, 22, 22);
 }
 
 .nav {
@@ -302,7 +299,7 @@ body.dark-theme {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: red;
+  color: var(--body-color);
 }
 
 @media screen and (max-width: 767px) {
@@ -362,15 +359,9 @@ body.dark-theme {
 }
 
 /*=============== HOME ===============*/
-.home {
-  background-color: rgba(54, 158, 98, 0.13);
-}
-
 .home__container {
   position: relative;
-
   row-gap: 2.5rem;
-  /* background-color: rgba(54, 158, 98, 0.13); */
 }
 
 .home__img {
@@ -383,7 +374,7 @@ body.dark-theme {
 }
 
 .home__img-bg {
-  /*background-color: var(--first-color);*/
+  background-color: var(--first-color);
   width: 258px;
   height: 430px;
   border-radius: 0 0 12px 12px;
@@ -403,7 +394,6 @@ body.dark-theme {
 
 .home__description {
   margin-bottom: var(--mb-1-5);
-  color: rgb(255, 255, 255)
 }
 
 .home__price {
@@ -455,7 +445,7 @@ body.dark-theme {
 
 /*=============== SERVICES ===============*/
 .services {
-  background-color: rgba(54, 158, 98, 0.13);
+  background-color: rgba(23, 92, 14, 0.314);
   padding: 3rem;
 }
 
@@ -477,9 +467,7 @@ body.dark-theme {
 
 .services__item-description {
   text-align: center;
-  color: rgb(80, 255, 150);
 }
-
 
 /*=============== PRODUCTS ===============*/
 .products {
@@ -543,17 +531,15 @@ body.dark-theme {
 }
 
 .products__shape {
-  /*background-color: var(--card-color);*/
+  background-color: var(--card-color);
   border-radius: .5rem .5rem 0 0;
   text-align: center;
   padding: .25rem 0;
-  background-color: rgba(54, 158, 98, 0.13);
 }
 
 .products__data {
   padding: 1rem 0 1.25rem 1rem;
   position: relative;
-  background-color: rgba(54, 158, 98, 0.13);
 }
 
 .products__price {
@@ -565,14 +551,13 @@ body.dark-theme {
 }
 
 .products__quantity {
-  font-size: var(--font-bold);
-  color: rgb(10, 131, 182);
+  font-size: var(--small-font-size);
+  color: var(--text-color);
 }
 
 .products__name {
   font-size: var(--normal-font-size);
   margin-bottom: var(--mb-0-5);
-  color: rgb(98, 218, 65);
 }
 
 .products__button {
@@ -599,8 +584,7 @@ body.dark-theme {
 
 /*=============== FOOTER ===============*/
 .footer {
-  /*background-color: var(--card-color);*/
-  background-color: rgb(22, 22, 22);
+  background-color: var(--card-color);
 }
 
 .footer__container {
@@ -686,7 +670,7 @@ body.dark-theme {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(117, 100%, 13%);
+  background: hsl(0, 0%, 17%);
 }
 
 /*=============== CART ===============*/
